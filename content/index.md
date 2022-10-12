@@ -4,13 +4,14 @@
 
 # REQUIRED
 
+
 # The title of the document
 title = "Welcome to Bartholomew"
 
 # OPTIONAL
 
 # The description of the page.
-description = "The Micro-CMS for WebAssembly and Spin"
+description = "Some description of the page here."
 
 # The name of the template to use. `templates/` is automatically prepended, and `.hbs` is appended.
 # So if you set this to `blog`, it becomes `templates/blog.hbs`.
@@ -20,6 +21,9 @@ description = "The Micro-CMS for WebAssembly and Spin"
 # here. The format must be `string` keys with `string` values, though.
 [extra]
 date = "Nov. 15, 2021"
+header = "Shopping Store"
+main = "Bid Discount up to 50% 🥳"
+firstheader = "Welcome to bla bla"
 
 # Anything after this line is considered Markdown content
 ---
