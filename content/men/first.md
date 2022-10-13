@@ -1,7 +1,6 @@
 title = "First Item"
 date = "2022-10-12T19:01:25.946155Z"
 template = "blog"
-tags = [men]
 
 [extra]
 author = "John Doe"
