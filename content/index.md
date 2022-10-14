@@ -23,7 +23,8 @@ description = "Some description of the page here."
 date = "Nov. 15, 2021"
 header = "Shopping Store"
 main = "Bid Discount up to 50% 🥳"
-firstheader = "Welcome to bla bla"
+firstheader = "hoodies store 🛍"
+photo-src = "./static/images/file.png"
 
 # Anything after this line is considered Markdown content
 ---
