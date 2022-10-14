@@ -1,0 +1,184 @@
+{{! This adds the HTML head section and the beginning of the body. See content_top.hbs. }}
+{{> content_top }}
+
+<section id="banner_1">
+
+    <div class="container">
+        <div class="row">
+
+            <h2 style="text-align: left;">Men </h2>
+
+            <hr style="  border: 1.5px solid white; border-radius: 10px;
+    width: 190px;">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            {{#each (blogs site.pages "/content/men/")}}
+            <div class="col-md-4">
+                <div class="cardo">
+                    <div class="badge">Hot</div>
+                    <div class="cardo_tumb">
+                        <img src="https://pbs.twimg.com/media/Ds-ElfaV4AAjQTu?format=png&name=small" alt=""
+                            width="100%">
+                    </div>
+                    <div class="cardo_details">
+                        <span class="cardo_catagory">Hoodie Tag</span>
+                        <h4><a href="">{{page.head.title}}</a></h4>
+                        <p>{{page.head.extra.product_description}}</p>
+                        <div class="cardo_bottom-details">
+                            <div class="cardo_price">$230.99</div>
+                            <div class="cardo_links">
+                                <a href=""><i class="fa fa-heart-o"></i></a>
+                                <a href=""><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+    </div>
+</section><!-- end col -->
+
+<style>
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .cardo {
+        width: 380px;
+        position: relative;
+        margin-top: 10px auto;
+        background: #000;
+        border: 2px solid #fff;
+    }
+
+    .badge {
+        position: absolute;
+        left: 0;
+
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        background: red;
+        color: #fff;
+        border-radius: 0px;
+    }
+
+    .cardo_tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        background: #000;
+    }
+
+    .cardo_tumb img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .cardo_details {
+        padding: 30px;
+    }
+
+    .cardo_catagory {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ccc;
+        margin-bottom: 18px;
+    }
+
+    .cardo_details h4 a {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        color: #363636;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .cardo_details h4 a:hover {
+        color: #fbb72c;
+    }
+
+    .cardo_details p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        color: #999;
+    }
+
+    .cardo_bottom-details {
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    .cardo_bottom-details div {
+        float: left;
+        width: 50%;
+    }
+
+    .cardo_price {
+        font-size: 18px;
+        color: #fbb72c;
+        font-weight: 600;
+    }
+
+    .cardo_price small {
+        font-size: 80%;
+        font-weight: 400;
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .cardo_links {
+        text-align: right;
+    }
+
+    .cardo_links a {
+        display: inline-block;
+        margin-left: 5px;
+        color: #e1e1e1;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    .cardo_links a:hover {
+        color: #fbb72c;
+    }
+</style>
+{{! This adds the sidebar }}
+{{> content_sidebar }}
+
+{{! This closes the body. See content_bottom.hbs. }}
+{{> content_bottom }}
