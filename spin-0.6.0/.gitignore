@@ -1,0 +1,9 @@
+target
+.husky
+cache
+node_modules
+ignored-assets
+main.wasm
+.parcel-cache
+.vscode/*.log
+Cargo.lock

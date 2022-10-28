@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    {{! Use the formatter.title and formatter.description in the head }}
+    <title>{{page.head.title}} | {{site.info.title}}</title>
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+		  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="HandheldFriendly" content="true">
+    {{#if page.head.description}}
+    {{! Only render the description if it exists }}
+    <meta name="description" content="{{page.head.description}}">
+    {{/if}}
+
+    <!--Font-->
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Twitter Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+   
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
+
+    <style>
+*{margin:0;padding:0;-webkit-box-sizing:border-box;box-sizing:border-box;font-family:'Poppins'; background-color: #000; color: #fff;}.container{width:100%;max-width:1600px;margin:0 auto;padding-left:128px;padding-right:128px}@media (max-width: 1024px){.container{padding-left:64px;padding-right:64px}}@media (max-width: 767px){.container{padding-left:32px;padding-right:32px}}.hamburger{position:relative;display:block;width:35px;cursor:pointer;-webkit-appearance:none;-moz-appearance:none;appearance:none;background:none;outline:none;border:none}.hamburger .bar,.hamburger:after,.hamburger:before{content:'';display:block;width:100%;height:5px;background-color:#000;margin:6px 0px;-webkit-transition:0.4s;transition:0.4s}.hamburger.is-active:before{-webkit-transform:rotate(-45deg) translate(-8px, 6px);transform:rotate(-45deg) translate(-8px, 6px)}.hamburger.is-active:after{-webkit-transform:rotate(45deg) translate(-9px, -8px);transform:rotate(45deg) translate(-9px, -8px)}.hamburger.is-active .bar{opacity:0}.mobile-nav{position:fixed;top:0;left:100%;width:100%;min-height:100vh;display:block;z-index:98;background-color:#000;padding-top:120px;-webkit-transition:0.4s;transition:0.4s}.mobile-nav.is-active{left:0}.mobile-nav a{display:block;width:100%;max-width:200px;margin:0 auto 16px;text-align:center;padding:12px 16px;color:#FFF;text-decoration:none}.mobile-nav a:hover{background-color:#000;}@media (min-width: 768px){.mobile-nav{display:none}.hamburger{display:none}}section h2{text-align:center;margin-bottom:32px;font-size:36px}
+
+.container, .row, div{
+	width: 100%;
+}
+
+.button{transition: all .5s ease;
+    color: #fff;
+    border: 2px solid white;
+    font-family: 'Poppins';
+    text-align: center;
+    line-height: 1;
+    font-size: 17px;
+    background-color : transparent;
+    padding: 10px;
+	margin-right: 30px;
+    outline: none;
+    border-radius: 0px;
+	}
+
+	.button:hover {
+    color: #001F3F;
+    background-color: #fff;
+}
+@media (max-width: 767px){.button{font-size:18px; border-radius: 0px;}}img{max-width:100%}header{background-color: #000; color:#FFF;position:fixed;top:0;left:0;width:100%;z-index:99}header .container{padding-top:32px;padding-bottom:32px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}header .container h2{color:inherit;text-transform:uppercase;font-size:32px;font-weight:900}header .container h2 span{font-weight:600}header .container nav{display:-ms-grid;display:grid;grid-gap:16px;-ms-grid-columns:(auto)[4];grid-template-columns:repeat(4, auto)}@media (max-width: 767px){header .container nav{display:none}}header .container nav a{color:inherit;font-size:20px;text-decoration:none; padding: 10px 20px;}header.is-scrolling{background-color:#000;}header.is-scrolling .container{padding-top:16px;padding-bottom:16px}main section.banner{background-color: #000;
+  background-attachment: fixed;   background-position: 50% 50%; color:#FFF;position:relative;min-height:100vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;background-color: #000;background-position:top right;background-size:cover}main section.banner:after{content:'';display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:0;background-color:#000;opacity:0.8}main section.banner .container{position:relative;z-index:1}main section.banner .container h1 span{color:#FF9FDB}@media (max-width: 767px){main section.banner .container h1{font-size:32px}}
+   body{
+    background-color: #000;
+   }
+
+    </style>
+</head>
+
+<body>
+
+    <script>
+        window.onload = function () {
+	window.addEventListener('scroll', function (e) {
+		if (window.pageYOffset > 100) {
+			document.querySelector("header").classList.add('is-scrolling');
+		} else {
+			document.querySelector("header").classList.remove('is-scrolling');
+		}
+	});
+
+	const menu_btn = document.querySelector('.hamburger');
+	const mobile_menu = document.querySelector('.mobile-nav');
+
+	menu_btn.addEventListener('click', function () {
+		menu_btn.classList.toggle('is-active');
+		mobile_menu.classList.toggle('is-active');
+	});
+}
+    </script>
+   
+   <header>
+		<div class="container">
+            <a href="">
+			<h2 style="font-size: 25px;">
+                			{{ page.head.extra.navtitle }}
+
+            </h2>
+            </a>
+			<nav>
+				<a href="/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+				<a href="#"><i class="fa fa-heart-o"></i></a>
+			</nav>
+			<button class="hamburger">
+				<i class="fa fa-thin fa-bars"></i>
+			</button>
+		</div>
+	</header>
+	<nav class="mobile-nav">
+		<a href="/cart" style="	padding: 5px"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+		<a href="#"><i class="fa fa-heart"></i></a>
+	</nav>
+<br><br><br><br><br><br><br><br>
+
+   
+
+<style>
+    a{
+        text-decoration: none;
+        display: flex;
+        color: #fff;
+    }
+    a:hover{
+        color: #fff;
+    }
+</style>
+
+ <div class="container">
+        <div class="row">
+
+            <h2 style="text-align: left;">                		
+                			{{ page.head.extra.category }}
+ </h2>
+
+            <hr style="  border: 1.5px solid #ffffff; border-radius: 10px;
+    width: 190px;">
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+            {{#each (blogs site.pages "/content/womenlisting/")}}
+            <div class="col-md-4">
+                     <p align="center">
+                        <a href="{{uri}}">
+                <div class="cardo">
+                    <main class="badge">Hot</main>
+                    <div class="cardo_tumb">
+                        <img src="{{page.head.extra.photo-src}}" alt=""
+                            width="100%">
+                    </div>
+                    <div class="cardo_details">
+                        <span class="cardo_catagory">{{page.head.extra.tag}}</span>
+                        <h4><a href="">{{page.head.title}}</a></h4>
+                        <p>{{page.head.extra.product_description}}</p>
+                        <div class="cardo_bottom-details">
+                            <div class="cardo_price">{{page.head.extra.price}}</div>
+                            <div class="cardo_links">
+                                <a href=""><i class="fa fa-heart-o"></i></a>
+                                <a href=""><i class="fa fa-shopping-cart"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                </a>
+                </p>
+            </div>
+            {{/each}}
+
+        </div>
+    </div>
+</section><!-- end col -->
+
+<style>
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+    * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    .cardo {
+        width: 100%;
+        position: relative;
+        margin: 10px auto;
+        background: #000;
+        border: 2px solid #fff;
+    }
+
+    .badge {
+        position: absolute;
+        left: 0;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: 700;
+        background: red;
+        color: #fff;
+        border-radius: 0px;
+    }
+
+    .cardo_tumb {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 300px;
+        background: #000;
+    }
+
+    .cardo_tumb img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .cardo_details {
+        padding: 30px;
+    }
+
+    .cardo_catagory {
+        display: block;
+        font-size: 12px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #ccc;
+        margin-bottom: 18px;
+    }
+
+    .cardo_details h4 a {
+        font-weight: 500;
+        display: block;
+        margin-bottom: 18px;
+        text-transform: uppercase;
+        color: #363636;
+        text-decoration: none;
+        transition: 0.3s;
+    }
+
+    .cardo_details h4 a:hover {
+        color: #fbb72c;
+    }
+
+    .cardo_details p {
+        font-size: 15px;
+        line-height: 22px;
+        margin-bottom: 18px;
+        color: #999;
+    }
+
+    .cardo_bottom-details {
+        overflow: hidden;
+        border-top: 1px solid #eee;
+        padding-top: 20px;
+    }
+
+    .cardo_bottom-details div {
+        float: left;
+        width: 50%;
+    }
+
+    .cardo_price {
+        font-size: 18px;
+        color: #fbb72c;
+        font-weight: 600;
+    }
+
+    .cardo_price small {
+        font-size: 80%;
+        font-weight: 400;
+        text-decoration: line-through;
+        display: inline-block;
+        margin-right: 5px;
+    }
+
+    .cardo_links {
+        text-align: right;
+    }
+
+    .cardo_links a {
+        display: inline-block;
+        margin-left: 5px;
+        color: #e1e1e1;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    .cardo_links a:hover {
+        color: #fbb72c;
+    }
+</style>
+
+{{> content_bottom }} 
