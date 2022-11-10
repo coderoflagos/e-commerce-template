@@ -1,3 +1,0 @@
-p1/studly = {{p1 | studly_caps }}
-p2/studly = {{p2 | studly_caps }}
-p1/clappy = {{p1 | clappy }}
