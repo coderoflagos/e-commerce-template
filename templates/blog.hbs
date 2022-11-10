@@ -89,13 +89,15 @@
 		<div class="container">
             <a href="" class="nav-link">
 			<h2 style="font-size: 25px;">
+                       {{#each (blogs site.pages "/content/kids/")}}
                 			{{ page.head.extra.navtitle }}
+                                             {{/each}}
 
             </h2>
             </a>
 			<nav>
-				<a href="#"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-				<a href="#"><i class="fa fa-heart-o"></i></a>
+				<a href="/checkout"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+		
 			</nav>
 			<button class="hamburger">
 				<i class="fa fa-thin fa-bars"></i>
@@ -103,8 +105,7 @@
 		</div>
 	</header>
 	<nav class="mobile-nav">
-		<a href="#" style="	padding: 5px"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-		<a href="#"><i class="fa fa-heart"></i></a>
+		<a href="/checkout" style="	padding: 5px"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
 	</nav>
 <br><br><br><br><br><br><br><br>
 

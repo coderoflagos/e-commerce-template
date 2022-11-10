@@ -1,2 +1,0 @@
-cd274a7576e7984ad17a1bfbde718055d7a2c05a2231421d903f3e0b84139f94  target/wasm32-wasi/release/bartholomew.wasm
-31acbd5c8716d10a371dbeb3fd18e482dd613f4b271da24740188d174480b547  target/release/bart
