@@ -32,7 +32,9 @@ For the Bart CLI, install all the assets in Bartholomew's official releases just
 
 Run the ```spin up``` command to launch your site on ```localhost```:
 
-```$ spin up --follow-all```
+```
+$ spin up --follow-all
+```
 
 When you navigate to ```localhost:3000```, you should see your website running.
 
@@ -69,7 +71,9 @@ With this template, what you could do is modify the contents or add more files a
 
 Firstly, site configuration is super important, and you can find that in ```config/site.toml```. The most important part of this is the ```index_site_pages``` section. This is actually for the templates that should be indexed. Here’s what we have in the ```config/site.toml``` file for the e-commerce template: 
 
-```index_site_pages = ["main", "blog", "allmen", "allwomen", "kids", "cart", "checkout"]```
+```
+index_site_pages = ["main", "blog", "allmen", "allwomen", "kids", "cart", "checkout"]
+```
 
 The only two missing files are ```content_top.hbs``` and ```content_bottom.hbs```, which work with ```main.hbs```. The ```main.hbs``` file is the middle and the main part of the whole template, so it has to be indexed. For the ```blog.hbs``` file, it does not rely on ```content_top.hbs``` to give it a header, and the same applies to all other pages, except the ```main.hbs```. The ```content_top.hbs``` and ```content_bottom.hbs``` are just for the header and footer. 
 
@@ -96,11 +100,15 @@ For creating an item for men, the file you’re creating should be in the ```con
 
 To create an item for kids, the file you are creating has to be in the ‘content/kids’ folder just like this:
 
-```./bart new post content/kids filename.md --template = blog```
+```
+./bart new post content/kids filename.md --template = blog
+```
 
 To create an item for women, the file you are creating has to be in the ```content/womenlisting``` folder just like this:
 
-```./bart new post content/womenlisting filename.md --template = blog```
+```
+./bart new post content/womenlisting filename.md --template = blog
+```
 
 Creating items for the store is just as easy as that, all you have to do is run any of the commands above in your terminal.
 
@@ -108,13 +116,17 @@ Creating items for the store is just as easy as that, all you have to do is run 
 
 To do this, you need to navigate to the Markdown you created under the ‘[extra]’ section. Here’s a way to do it, it should be after the ‘[extra]’ section of the Markdown:
 
-```photo-src = “photofolder/photoname.png```
+```
+photo-src = “photofolder/photoname.png
+```
 
 How to change the price of an Item
 
 It's easy to do this, as all you need to do is this right after the ```[extra]``` section too:
 
-```price = “$price” ```
+```
+price = “$price” 
+```
 
 To learn more about how Bartholomew's templates work, you can check out this document. You also need to [learn about how the site configuration works](https://bartholomew.fermyon.dev/configuration) if you want to learn how to work with the templates.
 
