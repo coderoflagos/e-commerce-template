@@ -120,7 +120,7 @@ To do this, you need to navigate to the Markdown you created under the ‘[extra
 photo-src = “photofolder/photoname.png
 ```
 
-How to change the price of an Item
+## How to change the price of an Item
 
 It's easy to do this, as all you need to do is this right after the ```[extra]``` section too:
 
