@@ -24,9 +24,11 @@ $ git clone <your-github-account> <your-repo-name>
 $ cd <your-repo-name>
 ```
 
-### Bartholomew CLI 
+### Getting The Bartholomew CLI 
 
-For the Bart CLI, install all the assets in Bartholomew's official releases just as you have [here](https://github.com/fermyon/bartholomew/releases/tag/v0.6.0).
+Clone and ```make bart``` from [source](https://github.com/fermyon/bartholomew/) (requires Rust), using the following commands (NOTE: ```target/release/bart``` will need to be installed to a user executable directory such as /usr/bin/ to be run when built this way):
+
+
 
 ### ```spin up``` Your Site
 
@@ -107,7 +109,7 @@ To create an item for kids, the file you are creating has to be in the ‘conten
 To create an item for women, the file you are creating has to be in the ```content/womenlisting``` folder just like this:
 
 ```
-./bart new post content/womenlisting filename.md --template = blog
+./bart new post content/womenlisting filename.md --template blog
 ```
 
 Creating items for the store is just as easy as that, all you have to do is run any of the commands above in your terminal.
