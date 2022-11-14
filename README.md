@@ -28,6 +28,11 @@ $ cd <your-repo-name>
 
 Clone and ```make bart``` from [source](https://github.com/fermyon/bartholomew/) (requires Rust), using the following commands (NOTE: ```target/release/bart``` will need to be installed to a user executable directory such as /usr/bin/ to be run when built this way):
 
+```
+$ git clone https://github.com/fermyon/bartholomew.git
+$ cd bartholomew
+$ make bart
+```
 
 
 ### ```spin up``` Your Site
@@ -40,9 +45,9 @@ $ spin up --follow-all
 
 When you navigate to ```localhost:3000```, you should see your website running.
 
-### Creating your Content
+### Creating your a new item
 
-In this case, you will have to create your pages manually. You will notice we have almost everything ready, you could choose to add more files or delete some. All your contents run directly from the ```content/``` section. Creating your contents starts with creating the files in different directories under the ```content/``` folder. In this case, you’ll see we have ```content/latest```, ```content/kids```, ```content/cart```, etc. You have to create some Markdown files under it to see your contents, and signify the template the Markdown file should work with. 
+In this case, creating an item is creating a page with the Bartholomew CLI and adding some contents. You will notice we have almost everything ready, you could choose to add more files or delete some. All your contents run directly from the ```content/``` section. Creating your contents starts with creating the files in different directories under the ```content/``` folder. In this case, you’ll see we have ```content/latest```, ```content/kids```, ```content/cart```, etc. You have to create some Markdown files under it to see your contents, and signify the template the Markdown file should work with. 
 
 Here’s the structure of a random file in the ```latest/``` directory:
 
@@ -64,6 +69,18 @@ photo-src = "https://i.postimg.cc/h4z0vNrZ/Real-Madrid-Hoodie-Jacket-Pants-Train
 The first three lines of the code above are essential information for markdown files that work with Bartholomew. Firstly, you need to know that every markdown file is a page in Bartholomew. The ```title = “FirstItem"``` code says the title of the page should be **First Item**. The ```template = “blog”``` meta specifies the template the file should use for its UI. In this case, the file will use the ```blog.hbs``` template. 
 
 The other meta items under the ```[extra]``` section are not the basic ones, they are called the "extra information." The metas’ work with the strings that call them out in the specific template they work with. 
+
+- The ```type = post``` meta indicates that this page is a post.
+
+- The ```product_description = "Content"``` meta is for the product's description that you can see in the listing page.
+
+- The ```section = men"``` was added to specify the section of the item, in the case above, the item was fixed to be for a man.
+
+- The ```price = $70``` meta is for the price of the item. The price of the item will be displayed on the listings page.
+
+- The ```tag = "hoodies"``` meta is also to specify what type of item is being sold. In the case above, it's a hoodie.
+
+- The ```photo-src = photopath/photoname.png``` meta is for the photo of the item as this will be displayed on the listings page too.
 
 ### Viewing your Site!
 
@@ -94,11 +111,11 @@ In this template, adding an item is equivalent to creating a page. Here’s how 
 
 To create a latest item — it should be in the file you’re creating has to be in the ```content/latest/``` folder just like this:
 
-```./bart new post content/latest filename.md --template = blog```
+```./bart new post content/latest filename.md --template blog```
 
 For creating an item for men, the file you’re creating should be in the ```content/menlisting``` folder just like this:
 
-```./bart new post content/menlisting filename.md --template = blog ```
+```./bart new post content/menlisting filename.md --template blog ```
 
 To create an item for kids, the file you are creating has to be in the ‘content/kids’ folder just like this:
 
