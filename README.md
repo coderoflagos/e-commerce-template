@@ -124,7 +124,7 @@ For creating an item for men, the file you’re creating should be in the ```con
 To create an item for kids, the file you are creating has to be in the ‘content/kids’ folder just like this:
 
 ```
-./bart new post content/kids filename.md --template = blog
+./bart new post content/kids filename.md --template blog
 ```
 
 To create an item for women, the file you are creating has to be in the ```content/womenlisting``` folder just like this:
