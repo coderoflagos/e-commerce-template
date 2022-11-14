@@ -111,11 +111,15 @@ In this template, adding an item is equivalent to creating a page. Here’s how 
 
 To create a latest item — it should be in the file you’re creating has to be in the ```content/latest/``` folder just like this:
 
-```./bart new post content/latest filename.md --template blog```
+```
+./bart new post content/latest filename.md --template blog
+```
 
 For creating an item for men, the file you’re creating should be in the ```content/menlisting``` folder just like this:
 
-```./bart new post content/menlisting filename.md --template blog ```
+```
+./bart new post content/menlisting filename.md --template blog 
+```
 
 To create an item for kids, the file you are creating has to be in the ‘content/kids’ folder just like this:
 
