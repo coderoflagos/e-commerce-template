@@ -9,7 +9,7 @@ product_description = "Whatever is in here"
 section = "men"
 price = "$70"
 tag = "hoodies"
-photo-src = "https://i.postimg.cc/h4z0vNrZ/Real-Madrid-Hoodie-Jacket-Pants-Training-Suit-Light-Grey-2019-20-removebg-preview.png"
+photo-src = "/static/images/rmd.png"
 ---
 
 <!-- Ideally, for SEO there should be an image after the first paragraph or two -->
