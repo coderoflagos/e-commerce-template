@@ -1,6 +1,6 @@
 title = "Third Item"
 date = "2022-10-12T19:01:25.946155Z"
-template = "blog"
+template = "listing"
 
 [extra]
 author = "John Doe"

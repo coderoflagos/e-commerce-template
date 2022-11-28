@@ -18,29 +18,28 @@
         <div class="row">
             {{#each (blogs site.pages "/content/latest/")}}
             <div class="col-md-4">
-                     <p align="center">
-                        <a href="{{uri}}">
-                <div class="cardo">
-                    <main class="badge">Hot</main>
-                    <div class="cardo_tumb">
-                        <img src="{{page.head.extra.photo-src}}" alt=""
-                            width="100%">
-                    </div>
-                     <div class="cardo_details">
-                        <span class="cardo_catagory">{{page.head.extra.tag}}</span>
-                        <h4><a href="">{{page.head.title}}</a></h4>
-                        <p>{{page.head.extra.product_description}}</p>
-                        <div class="cardo_bottom-details">
-                            <div class="cardo_price">{{page.head.extra.price}}</div>
-                            <div class="cardo_links">
-                                <a href=""><i class="fa fa-heart-o"></i></a>
-                                <a href=""><i class="fa fa-shopping-cart"></i></a>
+                <p align="center">
+                    <a href="{{uri}}">
+                        <div class="cardo">
+                            <main class="badge">Hot</main>
+                            <div class="cardo_tumb">
+                                <img src="{{page.head.extra.photo-src}}" alt="" width="100%">
                             </div>
+                            <div class="cardo_details">
+                                <span class="cardo_catagory">{{page.head.extra.tag}}</span>
+                                <h4><a href="">{{page.head.title}}</a></h4>
+                                <p>{{page.head.extra.product_description}}</p>
+                                <div class="cardo_bottom-details">
+                                    <div class="cardo_price">{{page.head.extra.price}}</div>
+                                    <div class="cardo_links">
+                                        <a href=""><i class="fa fa-heart-o"></i></a>
+                                        <a href=""><i class="fa fa-shopping-cart"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
-                    </div>
-                    
-                </div>
-                </a>
+                    </a>
                 </p>
             </div>
             {{/each}}
@@ -191,61 +190,67 @@
 
 <section class="secondsec">
 
-<h2 align="center">View all 👀</h2>
-<div class="container">
-    <div class="row">
-        <div class="col-md-4">
-            <p align="center">
-                <a href="/menlisting">
-                            <button class="button" href="" style="  scroll-behavior: smooth; margin: auto; width: 50%;">Men</button>
-            </a>
-            </p>
-              </div>
+    <h2 align="center">View all 👀</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <p align="center">
+                    <a href="/menlisting">
+                        <button class="button" href=""
+                            style="  scroll-behavior: smooth; margin: auto; width: 50%;">Men</button>
+                    </a>
+                </p>
+            </div>
 
-        <div class="col-md-4">
-                       <p align="center">
-                             <a href="/womenlisting">
-            <button class="button" href="#section2" style="  scroll-behavior: smooth; margin: auto; width: 50%;">Women</button>
-     </a>
-        </p>
-        
+            <div class="col-md-4">
+                <p align="center">
+                    <a href="/womenlisting">
+                        <button class="button" href="#section2"
+                            style="  scroll-behavior: smooth; margin: auto; width: 50%;">Women</button>
+                    </a>
+                </p>
+
+            </div>
+
+
+            <div class="col-md-4">
+                <p align="center">
+                    <a href="/kidslisting">
+                        <button class="button" href="#section2"
+                            style="  scroll-behavior: smooth; margin: auto; width: 50%;">Kids</button>
+                    </a>
+
+                </p>
+            </div>
+
         </div>
-
-     
-        <div class="col-md-4">
-                       <p align="center">
-                         <a href="/kidslisting">
-            <button class="button" href="#section2" style="  scroll-behavior: smooth; margin: auto; width: 50%;">Kids</button>
-      </a>
-
-      </p>
-        </div>
-
     </div>
-</div>
 
 </section>
 
 <br><br><br>
 <section class="section-3">
 
-<div class="row">
-    <div class="container">
-        <div class="col-md-6">
-        <h3>Join our mailing list  </h3>
-<br>
-<p>Be the first to know about new product releases, exclusive deals, and more with our email newsletter.</p><br>
-        <div class="input-group">
-  <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Your email address here..." aria-describedby="button-addon2" style="border-radius: 0px;">
-  <button class="button" type="button" id="button-addon2">Button</button>
-</div>
-</div>
+    <div class="row">
+        <div class="container">
+            <div class="col-md-6">
+                <h3>Join our mailing list </h3>
+                <br>
+                <p>Be the first to know about new product releases, exclusive deals, and more with our email newsletter.
+                </p><br>
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Recipient's username"
+                        aria-label="Your email address here..." aria-describedby="button-addon2"
+                        style="border-radius: 0px;">
+                    <button class="button" type="button" id="button-addon2">Button</button>
+                </div>
+            </div>
 
-<div class="col-md-6">
-    
-</div>
+            <div class="col-md-6">
+
+            </div>
+        </div>
     </div>
-</div>
 </section>
 
 

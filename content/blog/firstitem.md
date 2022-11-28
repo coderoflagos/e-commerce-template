@@ -1,6 +1,6 @@
 title = "First Item title"
 date = "2022-10-12T09:40:22.307202Z"
-template = "blog"
+template = "listing"
 tags = []
 
 [extra]

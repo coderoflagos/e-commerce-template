@@ -1,6 +1,6 @@
 title = "Eighth Item"
 date = "2022-10-12T19:01:25.946155Z"
-template = "blog"
+template = "listing"
 
 [extra]
 author = "John Doe"
@@ -10,6 +10,9 @@ section = "men"
 price = "$70"
 tag = "hoodies"
 photo-src = "/static/images/rmd.png"
+itemid = "8"
+qty = "1"
+size = "XL"
 ---
 
 

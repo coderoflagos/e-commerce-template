@@ -1,4 +1,4 @@
-name = "bartholomew-template"
+name = "e-commerce-template"
 spin_version = "1"
 version = "0.1.0"
 description = "Your new Bartholomew website."
@@ -11,9 +11,10 @@ files = [ "content/**/*" , "templates/*", "scripts/*", "config/*"]
 [component.trigger]
 route = "/..."
 
+
 [[component]]
 source = "modules/spin_static_fs.wasm"
-id = "fileserver"
+id = "files"
 files = [ { source = "static/", destination = "/" } ]
 [component.trigger]
 route = "/static/..."
