@@ -30,7 +30,7 @@
 		crossorigin="anonymous"></script>
 
 	<style>
-		
+
 	</style>
 </head>
 
@@ -56,50 +56,39 @@
 		}
 	</script>
 
-	<header>
-		<div class="container">
-			<h2 style="font-size: 25px;">
-				{{ page.head.extra.firstheader }}
-			</h2>
-			<nav>
-				<a href="/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-			</nav>
-			<button class="hamburger">
-				<i class="fa fa-thin fa-bars"></i>
-			</button>
-		</div>
-	</header>
-	<nav class="mobile-nav">
-		<a href="/cart" style="	padding: 5px"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-	</nav>
-	<main>
-		<section class="banner">
-			<div class="container">
-				<div class="row">
+	<div class="header">
+		<p class="title">
+			{{ page.head.extra.firstheader }}
+		</p>
+		<nav>
+			<a href="/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+		</nav>
+		<button class="hamburger">
+			<i class="fa fa-thin fa-bars"></i>
+		</button>
+	</div>
 
-					<div class="col-lg-6">
-						<br><br><br><br>
-						<h1>
-							{{page.head.title}}
-						</h1>
-
-						<h3 style="font-size: 20px;">{{page.head.description}}</h3>
-						<br>
-						<a href="#banner_1">
-							<button class="button" style="  scroll-behavior: smooth;">Find out more</button>
-						</a>
-					</div>
-
-					<div class="col-lg-6" style="text-align: center;">
-						<img src="{{page.head.extra.photo-src}}" width="60%">
-					</div>
-
-					<a href="#banner_1" style="text-decoration: none;"> <i
-							class="fa fa-thin fa-angle-double-down d-flex justify-content-center animate__animated animate__bounce"
-							style="font-size: 50px;"></i></a>
-				</div>
+	<div class="banner">
+		<div class="row">
+			<div class="col-lg-6">
+				<h1>
+					{{page.head.title}}
+				</h1>
+				<h3 style="font-size: 20px;">
+					{{page.head.description}}
+				</h3>
+				<a href="#banner_1">
+					<button class="button" style="scroll-behavior: smooth;">Find out more</button>
+				</a>
 			</div>
 
-		</section>
+			<div class="col-lg-6" style="text-align: center;">
+				<img src="{{page.head.extra.photo-src}}" width="60%">
+			</div>
 
-	</main>
+			<a href="#banner_1" style="text-decoration: none;">
+				<i class="fa fa-thin fa-angle-double-down d-flex justify-content-center animate__animated animate__bounce"
+					style="font-size: 50px;"></i>
+			</a>
+		</div>
+	</div>

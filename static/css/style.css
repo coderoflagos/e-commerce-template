@@ -1,3 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
+
+/* specifics */
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container,
+.row,
+div {
+    width: 100%;
+}
+
+img {
+    max-width: 100%
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 32px;
+    font-size: 36px
+}
+
+/* container */
+.container {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 128px;
+    padding-right: 128px
+}
+
+/* header class */
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 128px;
+    padding-right: 128px;
+}
+
+.title {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+/* banner */
+.banner {
+    background-color: #000;
+    background-attachment: fixed;
+    color: #FFF;
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-position: top right;
+    background-size: cover;
+    justify-content: center;
+}
+
+/* @media */
 @media (max-width: 1024px) {
     .container {
         padding-left: 64px;
@@ -11,6 +92,7 @@
         padding-right: 32px
     }
 }
+
 @media (min-width: 768px) {
     .mobile-nav {
         display: none
@@ -20,30 +102,33 @@
         display: none
     }
 }
+
 @media (max-width: 767px) {
     main section.banner .container h1 {
         font-size: 32px
     }
 }
 
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    font-family: 'Poppins';
-    background-color: #000;
-    color: #fff;
+@media (max-width: 767px) {
+    .button {
+        font-size: 18px;
+        border-radius: 0px;
+    }
 }
 
-.container {
-    width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
-    padding-left: 128px;
-    padding-right: 128px
+@media (max-width: 767px) {
+    header .container nav {
+        display: none
+    }
 }
 
+@media (max-width: 767px) {
+    main section.banner .container h1 {
+        font-size: 32px
+    }
+}
 
-
+/* hamburger */
 .hamburger {
     position: relative;
     display: block;
@@ -84,6 +169,7 @@
     opacity: 0
 }
 
+/* mobile-nav */
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -117,19 +203,7 @@
     background-color: #000;
 }
 
-
-section h2 {
-    text-align: center;
-    margin-bottom: 32px;
-    font-size: 36px
-}
-
-.container,
-.row,
-div {
-    width: 100%;
-}
-
+/* button */
 .button {
     transition: all .5s ease;
     color: #fff;
@@ -150,151 +224,7 @@ div {
     background-color: #fff;
 }
 
-@media (max-width: 767px) {
-    .button {
-        font-size: 18px;
-        border-radius: 0px;
-    }
-}
-
-img {
-    max-width: 100%
-}
-
-header {
-    background-color: #000;
-    color: #FFF;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 99
-}
-
-header .container {
-    padding-top: 32px;
-    padding-bottom: 32px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center
-}
-
-header .container h2 {
-    color: inherit;
-    text-transform: uppercase;
-    font-size: 32px;
-    font-weight: 900
-}
-
-header .container h2 span {
-    font-weight: 600
-}
-
-header .container nav {
-    display: -ms-grid;
-    display: grid;
-    grid-gap: 16px;
-    -ms-grid-columns: (auto)[4];
-    grid-template-columns: repeat(4, auto)
-}
-
-@media (max-width: 767px) {
-    header .container nav {
-        display: none
-    }
-}
-
-header .container nav a {
-    color: inherit;
-    font-size: 20px;
-    text-decoration: none;
-    padding: 10px 20px;
-}
-
-header.is-scrolling {
-    background-color: #000;
-}
-
-header.is-scrolling .container {
-    padding-top: 16px;
-    padding-bottom: 16px
-}
-
-main section.banner {
-    background-color: #000;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    color: #FFF;
-    position: relative;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #000;
-    background-position: top right;
-    background-size: cover
-}
-
-main section.banner:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    background-color: #000;
-    opacity: 0.8
-}
-
-main section.banner .container {
-    position: relative;
-    z-index: 1
-}
-
-main section.banner .container h1 span {
-    color: #FF9FDB
-}
-
-@media (max-width: 767px) {
-    main section.banner .container h1 {
-        font-size: 32px
-    }
-}
-
-body {
-    background-color: #000;
-    color: #fff;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
-    font-family: 'Roboto', sans-serif;
-}
-
-a {
-    text-decoration: none;
-}
-
+/* .cardo */
 .cardo {
     width: 100%;
     position: relative;
@@ -312,6 +242,102 @@ a {
     background: red;
     color: #fff;
     border-radius: 0px;
+}
+
+.cardo_tumb {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    background: #000;
+}
+
+.cardo_tumb img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.cardo_details {
+    padding: 30px;
+}
+
+.cardo_catagory {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #ccc;
+    margin-bottom: 18px;
+}
+
+.cardo_details h4 a {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    color: #363636;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cardo_details h4 a:hover {
+    color: #fbb72c;
+}
+
+.cardo_details p {
+    font-size: 15px;
+    line-height: 22px;
+    margin-bottom: 18px;
+    color: #999;
+}
+
+.cardo_bottom-details {
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}
+
+.cardo_bottom-details div {
+    float: left;
+    width: 50%;
+}
+
+.cardo_price {
+    font-size: 18px;
+    color: #fbb72c;
+    font-weight: 600;
+}
+
+.cardo_price small {
+    font-size: 80%;
+    font-weight: 400;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.cardo_links {
+    text-align: right;
+}
+
+.cardo_links a {
+    display: inline-block;
+    margin-left: 5px;
+    color: #e1e1e1;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.cardo_links a:hover {
+    color: #fbb72c;
+}
+
+.cardo {
+    width: 100%;
+    position: relative;
+    margin: 10px auto;
+    background: #000;
+    border: 2px solid #fff;
 }
 
 .cardo_tumb {
