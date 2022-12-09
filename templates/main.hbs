@@ -3,7 +3,7 @@
 
 <section id="banner_1">
 
-    <div class="container">
+    <div class="container-mailing">
         <div class="row">
 
             <h2 style="text-align: left;">Latest </h2>
@@ -13,8 +13,7 @@
         </div>
     </div>
 
-    <div class="container">
-
+    <div class="container-mailing">
         <div class="row">
             {{#each (blogs site.pages "/content/latest/")}}
             <div class="col-md-4">
@@ -52,24 +51,6 @@
     body {
         background-color: #000;
         color: #fff;
-    }
-
-    @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
-    * {
-        -webkit-box-sizing: border-box;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-
-    body {
-        font-family: 'Roboto', sans-serif;
-    }
-
-    a {
-        text-decoration: none;
     }
 
     .cardo {
@@ -231,26 +212,21 @@
 <br><br><br>
 <section class="section-3">
 
-    <div class="row">
-        <div class="container">
-            <div class="col-md-6">
-                <h3>Join our mailing list </h3>
-                <br>
-                <p>Be the first to know about new product releases, exclusive deals, and more with our email newsletter.
-                </p><br>
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Recipient's username"
-                        aria-label="Your email address here..." aria-describedby="button-addon2"
-                        style="border-radius: 0px;">
-                    <button class="button" type="button" id="button-addon2">Button</button>
-                </div>
-            </div>
+    <div class="container-mailing">
 
-            <div class="col-md-6">
-
-            </div>
+        <h3>Join our mailing list </h3>
+        <br>
+        <p>Be the first to know about new product releases, exclusive deals, and more with our email newsletter.
+        </p><br>
+        <div class="input-group">
+            <input type="text" class="form-control" placeholder="Recipient's username"
+                aria-label="Your email address here..." aria-describedby="button-addon2" style="border-radius: 0px;">
+            <button class="button" type="button" id="button-addon2">Button</button>
         </div>
     </div>
+    </div>
+
+
 </section>
 
 

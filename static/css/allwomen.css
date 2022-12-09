@@ -1,3 +1,4 @@
+/*Styling Code for the root elements of the page */
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +9,13 @@
     color: #fff;
 }
 
+/*Code for the other container of the page */
+.container-mailing {
+    width: 82%;
+    margin: 0 auto;
+  }
+
+/*Code for the main container of the page */
 .container {
     width: 100%;
     max-width: 1600px;
@@ -15,7 +23,17 @@
     padding-left: 128px;
     padding-right: 128px
 }
+/*Code for every link in the page*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+/*Code for the hover effect for every link in the page*/
+a:hover {
+    color: #fff;
+}
 
+/*Responsivness codes*/
 @media (max-width: 1024px) {
     .container {
         padding-left: 64px;
@@ -30,6 +48,35 @@
     }
 }
 
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none
+    }
+
+    .hamburger {
+        display: none
+    }
+}
+
+@media (max-width: 767px) {
+    .button {
+        font-size: 18px;
+        border-radius: 0px;
+    }
+}
+@media (max-width: 767px) {
+    header .container nav {
+        display: none
+    }
+}
+
+@media (max-width: 767px) {
+    main section.banner .container h1 {
+        font-size: 32px
+    }
+}
+
+/*Code for the navbar's Icon*/
 .hamburger {
     position: relative;
     display: block;
@@ -42,7 +89,7 @@
     outline: none;
     border: none
 }
-
+/*Code for the navbar's Icon*/
 .hamburger .bar,
 .hamburger:after,
 .hamburger:before {
@@ -55,21 +102,22 @@
     -webkit-transition: 0.4s;
     transition: 0.4s
 }
-
+/*Code for the navbar's Icon*/
 .hamburger.is-active:before {
     -webkit-transform: rotate(-45deg) translate(-8px, 6px);
     transform: rotate(-45deg) translate(-8px, 6px)
 }
-
+/*Code for the navbar's Icon*/
 .hamburger.is-active:after {
     -webkit-transform: rotate(45deg) translate(-9px, -8px);
     transform: rotate(45deg) translate(-9px, -8px)
 }
-
+/*Code for the navbar's Icon*/
 .hamburger.is-active .bar {
     opacity: 0
 }
 
+/*Code for the the layout of the navbar*/
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -84,10 +132,12 @@
     transition: 0.4s
 }
 
+/*Code for the the layout of the navbar link*/
 .mobile-nav.is-active {
     left: 0
 }
 
+/*Code for the the layout of the navbar link*/
 .mobile-nav a {
     display: block;
     width: 100%;
@@ -99,63 +149,29 @@
     text-decoration: none
 }
 
+/*Code for the navbar's mobile layout*/
 .mobile-nav a:hover {
     background-color: #000;
 }
 
-@media (min-width: 768px) {
-    .mobile-nav {
-        display: none
-    }
-
-    .hamburger {
-        display: none
-    }
-}
-
+/*Code for the shopping cart text*/
 section h2 {
     text-align: center;
     margin-bottom: 32px;
     font-size: 36px
 }
-
-.container,
-.row,
-div {
-    width: 100%;
+/*Styling for the links margin and padding */
+a{
+    margin: 0;
+    padding: 0;;
 }
 
-.button {
-    transition: all .5s ease;
-    color: #fff;
-    border: 2px solid white;
-    font-family: 'Poppins';
-    text-align: center;
-    line-height: 1;
-    font-size: 17px;
-    background-color: transparent;
-    padding: 10px;
-    margin-right: 30px;
-    outline: none;
-    border-radius: 0px;
-}
-
-.button:hover {
-    color: #001F3F;
-    background-color: #fff;
-}
-
-@media (max-width: 767px) {
-    .button {
-        font-size: 18px;
-        border-radius: 0px;
-    }
-}
-
+/*Code for the image in the card */
 img {
     max-width: 100%
 }
 
+/*Styling Code for the navbar*/
 header {
     background-color: #000;
     color: #FFF;
@@ -195,15 +211,10 @@ header .container nav {
     display: -ms-grid;
     display: grid;
     grid-gap: 16px;
-    -ms-grid-columns: (auto)[4];
-    grid-template-columns: repeat(4, auto)
+    -ms-grid-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, auto);
 }
 
-@media (max-width: 767px) {
-    header .container nav {
-        display: none
-    }
-}
 
 header .container nav a {
     color: inherit;
@@ -221,78 +232,17 @@ header.is-scrolling .container {
     padding-bottom: 16px
 }
 
-main section.banner {
-    background-color: #000;
-    background-attachment: fixed;
-    background-position: 50% 50%;
-    color: #FFF;
-    position: relative;
-    min-height: 100vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    background-color: #000;
-    background-position: top right;
-    background-size: cover
-}
-
-main section.banner:after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-    background-color: #000;
-    opacity: 0.8
-}
-
-main section.banner .container {
-    position: relative;
-    z-index: 1
-}
-
-main section.banner .container h1 span {
-    color: #FF9FDB
-}
-
-@media (max-width: 767px) {
-    main section.banner .container h1 {
-        font-size: 32px
-    }
-}
-
-body {
-    background-color: #000;
-}
+/*Styling Code for the body the whole body*/
 body {
     background-color: #000;
     color: #fff;
-}
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-
-body {
     font-family: 'Roboto', sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
+/*Importation of the 'Roboto' font*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700');
 
+/*Styling of the Card */
 .cardo {
     width: 100%;
     position: relative;
@@ -301,6 +251,7 @@ a {
     border: 2px solid #fff;
 }
 
+/*Styling of the 'HOT' red badge*/
 .badge {
     position: absolute;
     left: 0;
@@ -312,6 +263,7 @@ a {
     border-radius: 0px;
 }
 
+/*Code for the card of the product*/
 .cardo_tumb {
     display: flex;
     align-items: center;
@@ -320,15 +272,18 @@ a {
     background: #000;
 }
 
+/*Code for the image of the product*/
 .cardo_tumb img {
     max-width: 100%;
     max-height: 100%;
 }
 
+/*Code for the description of the product in the card*/
 .cardo_details {
     padding: 30px;
 }
 
+/*Code for the category of the profuct*/
 .cardo_catagory {
     display: block;
     font-size: 12px;
@@ -399,3 +354,4 @@ a {
 .cardo_links a:hover {
     color: #fbb72c;
 }
+/*End of the card styling*/

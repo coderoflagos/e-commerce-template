@@ -29,6 +29,7 @@
         integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
         crossorigin="anonymous"></script>
 
+        <!--Main Style link-->
     <link rel="stylesheet" href="/static/css/allwomen.css">
 
     <style>
@@ -38,46 +39,28 @@
 
 <body>
 
-    <script>
-        window.onload = function () {
-            window.addEventListener('scroll', function (e) {
-                if (window.pageYOffset > 100) {
-                    document.querySelector("header").classList.add('is-scrolling');
-                } else {
-                    document.querySelector("header").classList.remove('is-scrolling');
-                }
-            });
-
-            const menu_btn = document.querySelector('.hamburger');
-            const mobile_menu = document.querySelector('.mobile-nav');
-
-            menu_btn.addEventListener('click', function () {
-                menu_btn.classList.toggle('is-active');
-                mobile_menu.classList.toggle('is-active');
-            });
-        }
-    </script>
-
+<!--Navbar codes-->
     <header>
         <div class="container">
-            <a href="">
+            <a href="" class="navlink">
                 <h2 style="font-size: 25px;">
+                    {{#each (blogs site.pages "/content/kids/")}}
                     {{ page.head.extra.navtitle }}
+                    {{/each}}
 
                 </h2>
             </a>
             <nav>
                 <a href="/cart"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-                <a href="#"><i class="fa fa-heart-o"></i></a>
+
             </nav>
-            <button class="hamburger">
-                <i class="fa fa-thin fa-bars"></i>
-            </button>
+            <a class="hamburger" href="/cart">
+                <i class="fa fa-shopping-bag"></i>
+            </a>
         </div>
     </header>
     <nav class="mobile-nav">
-        <a href="/cart" style="	padding: 5px"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-        <a href="#"><i class="fa fa-heart"></i></a>
+        <a href="/checkout" style="	padding: 5px"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
     </nav>
 
     <br><br><br><br><br><br><br><br>
@@ -85,18 +68,11 @@
 
 
     <style>
-        a {
-            text-decoration: none;
-            display: flex;
-            color: #fff;
-        }
 
-        a:hover {
-            color: #fff;
-        }
     </style>
 
-    <div class="container">
+<!--The 'Women' text-->
+    <div class="container-mailing">
         <div class="row">
 
             <h2 style="text-align: left;">
@@ -108,7 +84,8 @@
         </div>
     </div>
 
-    <div class="container">
+<!--The cards for the items in the page-->
+    <div class="container-mailing">
 
         <div class="row">
             {{#each (blogs site.pages "/content/womenlisting/")}}
@@ -143,5 +120,5 @@
     </div>
     </section><!-- end col -->
 
-   
+<!--Fetching the footer from the 'content_bottom.hbs' file-->
     {{> content_bottom }}
